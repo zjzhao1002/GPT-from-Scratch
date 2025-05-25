@@ -1,0 +1,469 @@
+Question: How to handle missing data?
+Answer: 
+    Data can be missing because of mannual error or can be gennualy missing.
+    * Delete the low quality records completely which have too many missing data.
+    * Impute the values by educated guess, taking average or regression.
+    * Use domain knowledge to impute values.
+    * For categorical data, a new "missing" category is often created to handle missing values. 
+
+Question: What is SQL, and what does it stand for?
+Answer: 
+    SQL stands for Structured Query Language. It is a specialized programming language used for managing and manipulating relational databases. It is designed for tasks related to database management, data retrieval, data manipulation, and data definition. 
+
+Question: Explain the differences between SQL and NoSQL databases
+Answer: 
+    SQL and NoSQL databases are different in their data structures, schema, query languages, and use cases. 
+    * SQL databases are relational databases, they organise and store data using a structured schema with tables, rows, and columns. NoSQL databases use a number of different types of data models, such as document-based (like JSON and BSON), key-value pairs, column families, and graphs.
+    * SQL databases have a set schema, thus before inserting data, we must establish the structure of our data.The schema may need to be changed, which might be a difficult process. NoSQL databases frequently employ a dynamic or schema-less approach, enabling you to insert data without first creating a predetermined schema.
+    * SQL is a strong and standardised query language that is used by SQL databases. Joins, aggregations, and subqueries are only a few of the complicated processes supported by SQL queries. The query languages or APIs used by NoSQL databases are frequently tailored to the data model.
+
+Question: What are the primary SQL database management systems (DBMS)?
+Answer: 
+    Relational database systems, both open source and commercial, are the main SQL database management systems (DBMS). They are widely used for managing and processing structured data. 
+    Some popular SQL database management systems are: 
+    * MySQL
+    * SQLite
+    * PostgreSQL
+    * Microsoft SQL Server
+    * Oracle Database
+
+Question: What is the difference between supervised and unsupervised machine learning?
+Answer: 
+    The difference between supervised learning and unsupervised learning are
+    * Supervised learning refers to that part of machine learning where we know what the target variable is and it is labeled. Unsupervised Learning is used when we do not have labeled data and we are not sure about our target variable.
+    * The objective of supervised learning is to predict an outcome or classify the data. The objective here is to discover patterns among the features of the dataset and group similar features together.
+    * Some supervised algorithms are Regression and Classification. Some unsupervised algorithms are Dimensionality reduction and Clustering.
+    * Supervised learning uses evaluation metrics like Mean Squared Error and Accuracy. Unsupervised Learning uses evaluation metrics like Silhouette and Inertia.
+
+Question: What is model overfitting? How can you avoid it?
+Answer: 
+    Overfitting occurs when the machine learning model learns too much from training data. This model is not able to generalize the underlying information. When this happens, the model is able to describe training data very accurately but loses precision on every dataset it has not been trained on. 
+    There are some method to avoid overfitting:
+    * Since overfitting algorithm captures the noise in data, reducing the number of features will help.
+    * We can use the "Regularization" technique. It works well when we have lots of slightly useful features. Sklearn linear model (Ridge and LASSO) uses regularization parameter "alpha" to control the size of the coefficients by imposing a penalty.
+    * K-fold cross validation. In this technique we devide the training data in multiple batches and use each batch for training and testing the model.
+    * Increasing the training data also helps to avoid overfitting.
+    * We can use the ensemble models. These models learn the features and combine the results from different training models into a single prediction.
+
+Question: What is K Fold cross validation? Why do you use it?
+Answer: 
+    In case of K Fold cross validation, input data is divided into "K" number of folds. Suppose we have divided data into 5 folds (K=5). Now we have 5 sets of data to train and test our model. So the model will get trained and tested 5 times, but for every iteration we will use one fold as test data and rest all as training data. Note that for every iteration, data in training and test fold changes which adds to the effectiveness of this method. This method significantly reduces underfitting as we are using most of the data for training (fitting), and also significantly reduces overfitting as most of the data is also being used in validation set. K Fold cross validation helps to generalize the machine learning model, which results in better predictions on unknown data.
+
+Question: What is the difference between bias and variance?
+Answer:
+    Bias:
+    * Bias comes from model underfitting some set of data.
+    * Underfitting models have high error in training as well as test set. This behavior is called as "High Bias".
+    * Low bias (low underfitting) ML algorithms: Decision Tree, k-NN, Support Vector Machine (SVM).
+    * High bias (high underfitting) ML algorithms: Linear regression, Logistic regression.
+    Variance:
+    * Variance is the result of model overfitting some set of data.
+    * Overfitting models have low error in training set but high error in test set. This behavior is called as "High Variance".
+    * High Variance (high overfitting) ML algorithms: Polynimial regression.
+
+Question: Explain the concepts of mean, median, mode, and standard deviation.
+Answer:
+    Mean: The mean, often referred to as the average, is calculated by summing up all the values in a dataset and then dividing by the total number of values.
+    Median: When data are sorted in either ascending or descending order, the median is the value in the middle of the dataset. The median is the average of the two middle values when the number of data points is even. In comparison to the mean, the median is less impacted by extreme numbers, making it a more reliable indicator of central tendency.
+    Mode: The value that appears most frequently in a dataset is the mode. One mode (unimodal), several modes (multimodal), or no mode (if all values occur with the same frequency) can all exist in a dataset.
+    Standard deviation: The spread or dispersion of data points in a dataset is measured by the standard deviation. It quantifies the variance between different data points.
+
+Question: What is the normal distribution and standard normal distribution?
+Answer:
+    The normal distribution, also known as the Gaussian distribution or bell curve, is a continuous probability distribution that is characterized by its symmetric bell-shaped curve. The normal distribution is defined by two parameters: the mean and the standard deviation. The mean determines the center of the distribution, and the standard deviation determines the spread or dispersion of the distribution. The distribution is symmetric around its mean, and the bell curve is centered at the mean. The probabilities for values that are further from the mean taper off equally in both directions. Similar rarity applies to extreme values in the two tails of the distribution. Not all symmetrical distributions are normal, even though the normal distribution is symmetrical.
+    The standard normal distribution, also known as the Z distribution, is a special case of the normal distribution where the mean is 0 and the standard deviation is 1. It is a standardized form of the normal distribution, allowing for easy comparison of scores or observations from different normal distributions.
+
+Question: What is the ER model in SQL?
+Answer:
+    The structure and relationships between the data entities in a database are represented by the Entity-Relationship (ER) model, a conceptual framework used in database architecture. The ER model is frequently used in conjunction with SQL for creating the structure of relational databases even though it is not a component of the SQL language itself.
+
+Question: What is data transformation?
+Answer: 
+    The process of transforming data from one structure, format, or representation into another is referred to as data transformation. In order to make the data more suited for a given goal, such as analysis, visualisation, reporting, or storage, this procedure may involve a variety of actions and changes to the data. Data integration, cleansing, and analysis depend heavily on data transformation, which is a common stage in data preparation and processing pipelines.
+
+Question: What is a primary key?
+Answer:
+    A relational database table’s main key, also known as a primary keyword, is a column that is unique for each record. It is a distinctive identifier.The primary key of a relational database must be unique. Every row of data must have a primary key value and none of the rows can be null.
+
+Question: Explain the k-nearest neighbors (KNN) algorithm.
+Answer:
+    The k-Nearest Neighbors (KNN) algorithm is a simple and versatile supervised machine learning algorithm used for both classification and regression tasks. KNN makes predictions by memorizing the data points rather than building a model about it. This is why it is also called “lazy learner” or “memory based” model too.
+    KNN relies on the principle that similar data points tend to belong to the same class or have similar target values. This means that, In the training phase, KNN stores the entire dataset consisting of feature vectors and their corresponding class labels (for classification) or target values (for regression). It then calculates the distances between that point and all the points in the training dataset. (commonly used distance metrics are Euclidean distance and Manhattan distance).
+    (Note : Choosing an appropriate value for k is crucial. A small k may result in noisy predictions, while a large k can smooth out the decision boundaries. The choice of distance metric and feature scaling also impact KNN’s performance.)
+
+Question: What is the Naïve Bayes algorithm, what are the different assumptions of Naïve Bayes?
+Answer:
+    The Naïve Bayes algorithm is a probabilistic classification algorithm based on Bayes theorem with a "naïve" assumption of feature independence within each class. It is commonly used for both binary and multi-class classification tasks, particularly in situations where simplicity, speed, and efficiency are essential.
+    The main assumptions that Naïve Bayes theorem makes are:
+    * Feature independence – It assumes that the features involved in Naïve Bayes algorithm are conditionally independent, i.e., the presence / absence of one feature does not affect any other feature. 
+    * Equality – This assumes that the features are equal in terms of importance (or weight).
+    * Normality – It assumes that the feature distribution is Normal in nature, i.e., the data is distributed equally around its mean.
+
+Question: What are decision trees, and how do they work?
+Answer:
+    Decision trees are a popular machine learning algorithm used for both classification and regression tasks. They work by creating a tree-like structure of decisions based on input features to make predictions or decisions. Lets dive into its core concepts and how they work briefly:
+    * Decision trees consist of nodes and edges.
+    * The tree starts with a root node and branches into internal nodes that represent features or attributes.
+    * These nodes contain decision rules that split the data into subsets.
+    * Edges connect nodes and indicate the possible decisions or outcomes.
+    * Leaf nodes represent the final predictions or decisions.
+    The objective is to increase data homogeneity, which is often measured using standards like mean squared error (for regression) or Gini impurity (for classification). Decision trees can handle a variety of attributes and can effectively capture complex data relationships. They can, however, overfit, especially when deep or complex. To reduce overfitting, strategies like pruning and restricting tree depth are applied.
+
+Question: Describe random forests and their advantages over single-decision trees.
+Answer:
+    Random Forests are an ensemble learning technique that combines multiple decision trees to improve predictive accuracy and reduce overfitting. The advantages it has over single decision trees are:
+    * Improved Generalization: Single decision trees are prone to overfitting, especially when they become deep and complex. Random Forests mitigate this issue by averaging predictions from multiple trees, resulting in a more generalized model that performs better on unseen data.
+    * Better Handling of High-Dimensional Data : Random Forests are effective at handling datasets with a large number of features. They select a random subset of features for each tree, which can improve the performance when there are many irrelevant or noisy features.
+    * Robustness to Outliers: Random Forests are more robust to outliers because they combine predictions from multiple trees, which can better handle extreme cases.
+
+Question: Explain the uniform distribution.
+Answer:
+    A fundamental probability distribution in statistics is the uniform distribution, commonly referred to as the rectangle distribution. A constant probability density function (PDF) across a limited range characterises it. In simpler terms, in a uniform distribution, every value within a specified range has an equal chance of occurring.
+
+Question: Describe the Bernoulli distribution.
+Answer:
+    A discrete probability distribution, the Bernoulli distribution is focused on discrete random variables. The number of heads you obtain while tossing three coins at once or the number of pupils in a class are examples of discrete random variables that have a finite or countable number of potential values.
+
+Question: What is the binomial distribution?
+Answer: 
+    The binomial distribution is a discrete probability distribution that describes the number of successes in a fixed number of independent Bernoulli trials, where each trial has only two possible outcomes: success or failure. The outcomes are often referred to as "success" and "failure", but they can represent any dichotomous outcome, such as heads or tails, yes or no, or defective or non-defective.
+    The fundamental presumptions of a binomial distribution are that each trial has exactly one possible outcome, each trial has an equal chance of success, and each trial is either independent of the others or mutually exclusive.
+
+Question: Explain the exponential distribution and where it’s commonly used.
+Answer:
+    The probability distribution of the amount of time between events in the Poisson point process is known as the exponential distribution. The gamma distribution is thought of as a particular instance of the exponential distribution. Additionally, the geometric distribution’s continuous analogue is the exponential distribution.
+    Common applications of the exponential distribution include:
+    1. Reliability Engineering
+    2. Queueing Theory
+    3. Telecommunications
+    4. Finance
+    5. Natural Phenomena
+    6. Survival Analysis
+
+Question: Describe the Poisson distribution and its characteristics.
+Answer:
+    The Poisson distribution is a probability distribution that describes the number of events that occur within a fixed interval of time or space when the events happen at a constant mean rate and are independent of the time since the last event.
+    Key characteristics of the Poisson distribution include:
+    1. Discreteness: The Poisson distribution is used to model the number of discrete events that occur within a fixed interval.
+    2. Constant Mean Rate: The events occur at a constant mean rate per unit of time or space.
+    3. Independence: The occurrences of events are assumed to be independent of each other. The probability of multiple events occurring in a given interval is calculated based on the assumption of independence.
+
+Question: Explain the t-distribution and its relationship with the normal distribution.
+Answer: 
+    The t-distribution, also known as the Student's t-distribution, is used in statistics for inferences about population means when the sample size is small and the population standard deviation is unknown. The shape of the t-distribution is similar to the normal distribution, but it has heavier tails.
+    Relationship between T-Distribution and Normal Distribution: The t-distribution converges to the normal distribution as the degrees of freedom increase. In fact, when the degrees of freedom become very large, the t-distribution approaches the standard normal distribution (normal distribution with mean 0 and standard deviation 1). This is a result of the Central Limit Theorem.
+
+Question: What is the central limit theorem, and why is it significant in statistics?
+Answer:
+    The Central Limit Theorem states that, regardless of the shape of the population distribution, the distribution of the sample means approaches a normal distribution as the sample size increases.This is true even if the population distribution is not normal. The larger the sample size, the closer the sampling distribution of the sample mean will be to a normal distribution.
+
+Question: Describe the process of hypothesis testing, including null and alternative hypotheses.
+Answer:
+    Hypothesis testing is a statistical method used to make inferences about population parameters based on sample data.It is a systematic way of evaluating statements or hypotheses about a population using observed sample data.To identify which statement is best supported by the sample data, it compares two statements about a population that are mutually exclusive.
+    * Null hypothesis(H0): The null hypothesis (H0) in statistics is the default assumption or assertion that there is no association between any two measured cases or any two groups. In other words, it is a fundamental assumption or one that is founded on knowledge of the problem.
+    * Alternative hypothesis(H1): The alternative hypothesis, or H1, is the null-hypothesis-rejecting hypothesis that is utilised in hypothesis testing.
+
+Question: How do you calculate a confidence interval, and what does it represent?
+Answer:
+    A confidence interval (CI) is a statistical range or interval estimate for a population parameter, such as the population mean or population proportion, based on sample data. to calculate confidence interval these are the following steps.
+    1. Collect Sample Data
+    2. Choose a Confidence Level
+    3. Select the Appropriate Statistical Method
+    4. Calculate the Margin of Error (MOE)
+    5. Calculate the Confidence Interval
+    6. Interpret the Confidence Interval
+    Confidence interval represents a range of values within which we believe, with a specified level of confidence (e.g., 95%), that the true population parameter lies.
+
+Question: What is a p-value in Statistics?
+Answer:
+    The term "p-value", which stands for "probability value", is a key one in statistics and hypothesis testing. It measures the evidence contradicting a null hypothesis and aids in determining whether a statistical test's findings are statistically significant. Here is a definition of a p-value and how it is used in hypothesis testing.
+
+Question: Explain Type I and Type II errors in hypothesis testing.
+Answer:
+    Rejecting a null hypothesis that is actually true in the population results in a Type I error (false-positive); failing to reject a null hypothesis that is actually untrue in the population results in a type II error (false-negative).
+    Type I and Type II mistakes cannot be completely avoided, the investigator can lessen their risk by increasing the sample size (the less likely it is that the sample will significantly differ from the population).
+
+Question: What is the significance level (alpha) in hypothesis testing?
+Answer:
+    A crucial metric in hypothesis testing that establishes the bar for judging whether the outcomes of a statistical test are statistically significant is the significance level, which is sometimes indicated as (alpha). It reflects the greatest possible chance of committing a Type I error, or mistakenly rejecting a valid null hypothesis.
+    The significance level in hypothesis testing.
+    1. Setting the Significance Level
+    2. Interpreting the Significance Level
+    3. Hypothesis Testing Using Significance Level
+    4. Choice of Significance Level
+
+Question: How can you calculate the correlation coefficient between two variables?
+Answer:
+    The degree and direction of the linear link between two variables are quantified by the correlation coefficient. The Pearson correlation coefficient is the most widely used method for determining the correlation coefficient. The Pearson correlation coefficient can be calculated as follows.
+    1. Collect Data
+    2. Calculate the Means
+    3. Calculate the Covariance
+    4. Calculate the Standard Deviations
+    5. Calculate the Pearson Correlation Coefficient (r)
+    6. Interpret the Correlation Coefficient
+
+Question: What is covariance, and how is it related to correlation?
+Answer:
+    Both covariance and correlation are statistical metrics that show how two variables are related to one another.However, they serve slightly different purposes and have different interpretations.
+    * Covariance: Covariance measures the degree to which two variables change together. It expresses how much the values of one variable tend to rise or fall in relation to changes in the other variable.
+    * Correlation: A standardised method for measuring the strength and direction of a linear relationship between two variables is correlation. It multiplies the standard deviations of the two variables to scale the covariance.
+
+Question: Explain how to perform a hypothesis test for comparing two population means.
+Answer: 
+    When comparing two population means, a hypothesis test is used to determine whether there is sufficient statistical support to claim that the means of the two distinct populations differ significantly. Tests we can commonly use for include "paired t-test" or "two-sample t test". The general procedures for carrying out such a test are as follows.
+    1. Formulate Hypotheses
+    2. Choose the Significance Level
+    3. Collect Data
+    4. Define Test Statistic
+    5. Draw a Conclusion
+    6. Final Results
+
+Question: Explain the concept of normalization in database design.
+Answer:
+    By minimising data duplication and enhancing data integrity, normalisation is a method in database architecture that aids in the effective organisation of data. It includes dividing a big, complicated table into smaller, associated tables while making sure that connections between data elements are preserved. The basic objective of normalisation is to reduce data anomalies, which can happen when data is stored in an unorganised way and include insertion, update, and deletion anomalies.
+
+Question: What is database denormalization?
+Answer:
+    Database denormalization is the process of intentionally introducing redundancy into a relational database by merging tables or incorporating redundant data to enhance query performance. Unlike normalization, which minimizes data redundancy for consistency, denormalization prioritizes query speed. By reducing the number of joins required, denormalization can improve read performance for complex queries. However, it may lead to data inconsistencies and increased maintenance complexity. Denormalization is often employed in scenarios where read-intensive operations outweigh the importance of maintaining a fully normalized database structure. Careful consideration and trade-offs are essential to strike a balance between performance and data integrity.
+
+Question: What is a subquery, and how can it be used in SQL?
+Answer:
+    A subquery is a query that is nested within another SQL query, also referred to as an inner query or nested query. On the basis of the outcomes of another query, we can use it to get data from one or more tables. SQL’s subqueries capability is employed for a variety of tasks, including data retrieval, computations, and filtering.
+
+Question: What is the difference between a database and a data warehouse?
+Answer:
+    Database: Consistency and real-time data processing are prioritised, and they are optimised for storing, retrieving, and managing structured data. Databases are frequently used for administrative functions like order processing, inventory control, and customer interactions.
+    Data Warehouse: Data warehouses are made for processing analytical data. They are designed to facilitate sophisticated querying and reporting by storing and processing massive amounts of historical data from various sources. Business intelligence, data analysis, and decision-making all employ data warehouses.
+
+Question: How does Naïve Bayes handle categorical and continuous features?
+Answer:
+    Naive Bayes is probabilistic approach which assumes that the features are independent of each other. It calculates probabilities associated with each class label based on the observed frequencies of feature values within each class in the training data. This is done by finding the conditional probability of Feature given a class. To make predictions on categorical data, Naive Bayes calculates the posterior probability of each class given the observed feature values and selects the class with the highest probability as the predicted class label. This is called as "maximum likelihood" estimation.
+
+Question: What are imbalanced datasets and how can we handle them?
+Answer:
+    Imbalanced datasets are datasets in which the distribution of class labels (or target values) is heavily skewed, meaning that one class has significantly more instances than any other class. Imbalanced datasets pose challenges because models trained on such data can have a bias toward the majority class, leading to poor performance on the minority class, which is often of greater interest. This will lead to the model not generalizing well on the unseen data.
+    To handle imbalanced datasets, we can approach the following methods:
+    1. Resampling (Method of either increasing or decreasing the number of samples): 
+        * Up-sampling: In this case, we can increase the classes for minority by either sampling without replacement or generating synthetic examples. Some of the popular examples are SMOTE (Synthetic Minority Over-sampling Technique), etc.
+        * Down-sampling: Another case would be to randomly cut down the majority class such that it is comparable to minority class.
+    2. Ensemble methods (using models which are capable of handling imbalanced dataset inherently):
+        * Bagging : Techniques like Random Forests, which can mitigate the impact of class imbalance by constructing multiple decision trees from bootstrapped samples. 
+        * Boosting: Algorithms like AdaBoost and XGBoost can give more importance to misclassified minority class examples in each iteration, improving their representation in the final model.
+
+Question: What are outliers in the dataset and how can we detect and remove them?
+Answer:
+    An Outlier is a data point that is significantly different from other data points. Usually, Outliers are present in the extremes of the distribution and stand out as compared to their out data point counterparts.
+    For detecting Outliers we can use the following approaches:
+    * Visual inspection: This is the easiest way which involves plotting the data points into scatter plot/box plot, etc.
+    * statistics: By using measure of central tendency, we can determine if a data point falls significantly far from its mean, median, etc. making it a potential outlier.
+    * Z-score: if a data point has very high Z-score, it can be identified as Outlier.
+    For removing the outliers, we can use the following:
+    * Removal of outliers manually.
+    * Doing transformations like applying logarithmic transformation or square rooting the outlier.
+    * Performing imputations wherein the outliers are replaced with different values like mean, median, mode, etc.
+
+Question: What is the curse of dimensionality And How can we overcome this?
+Answer:
+    When dealing with a dataset that has high dimensionality (high number of features), we are often encountered with various issues and problems. Some of the issues faced while dealing with dimensionality dataset are listed below:
+    * Computational expense: The biggest problem with handling a dataset with vast number of features is that it takes a long time to process and train the model on it. This can lead to wastage of both time and monetary resources.
+    * Data sparsity: Many times data points are far from each other (high sparsity). This makes it harder to find the underlying patterns between features and can be a hinderance in proper analysis.
+    * Visualising issues and overfitting: It is rather easy to visualize 2d and 3d data. But beyond this order, it is difficult to properly visualize our data. Furthermore, more data features can be correlated and provide misleading information to the model training and cause overfitting.
+    These issues are what are generally termed as "Curse of Dimensionality".
+    To overcome this, we can follow different approaches – some of which are mentioned below:
+    * Feature Selection: Many a times, not all the features are necessary. It is the user's job to select out the features that would be necessary in solving a given problem statement. 
+    * Feature engineering: Sometimes, we may need a feature that is the combination of many other features. This method can, in general, reduces the features count in the dataset.
+    * Dimensionality Reduction techniques: These techniques reduce the number of features in a dataset while preserving as much useful information as possible. Some of the famous Dimensionality reduction techniques are: Principle component analysis (PCA), t-Distributed Stochastic Neighbor Embedding (t-SNE), etc.
+    * Regularization: Some regularization techniques like L1 and L2 regularizations are useful when deciding the impact each feature has on the model training.
+
+Question: How does the random forest algorithm handle feature selection?
+Answer:
+    Mentioned below is how Random forest handles feature selection
+    * When creating individual trees in the Random Forest ensemble, a subset of features is assigned to each tree which is called Feature Bagging. Feature Bagging introduces randomness and diversity among the trees.
+    * After the training, the features are assigned a "importance score" based on how well those features performed by reducing the error of the model. Features that consistently contribute to improving the model's accuracy across multiple trees are deemed more important.
+    * Then the features are ranked based on their importance scores. Features with higher importance scores are considered more influential in making predictions.
+
+Question: What is feature engineering? Explain the different feature engineering methods.
+Answer:
+    Feature Engineering: It can be defined as a method of preprocessing of data for better analysis purpose which involves different steps like selection, transformation, deletion of features to suit our problem at hand. Feature Engineering is a useful tool which can be used for:
+    * Improving the model's performance and Data interpretability
+    * Reduce computational costs
+    * Include hidden patterns for elevated Analysis results.
+    Some of the different methods of doing feature engineering are mentioned below:
+    1. Principle Component Analysis (PCA): It identifies orthogonal axes (principal components) in the data that capture the maximum variance, thereby reducing the data features.
+    2. Encoding – It is a technique of converting the data to be represented a numbers with some meaning behind it. It can be done in two ways:
+        * One-Hot Encoding – When we need to encode Nominal Categorical Data
+        * Label Encoding – When we need to encode Ordinal Categorical Data
+    3. Feature Transformation: Sometimes, we can create new columns essential for better modelling just by combining or modifying one or more columns.
+
+Question: How we will deal with the categorical text values in machine learning?
+Answer:
+    Often times, we are encountered with data that has Categorical text values. For example, male/female, first-class/second-class/third-class, etc. These Categorical text values can be divided into two types and based on that we deal with them as follows:
+    * If it is Categorical Nominal Data: If the data does not have any hidden order associated with it (e.g., male/female), we perform One-Hot encoding on the data to convert it into binary sequence of digits
+    * If it is Categorical Ordinal Data : When there is a pattern associated with the text data, we use Label encoding. In this, the numerical conversion is done based on the order of the text data. (e.g., Elementary/ Middle/ High/ Graduate,etc.)
+
+Question: Describe gradient descent and its role in optimizing machine learning models.
+Answer:
+    Gradient descent is a fundamental optimization algorithm used to minimize a cost or loss function in machine learning and deep learning. Its primary role is to iteratively adjust the parameters of a machine learning model to find the values that minimize the cost function, thereby improving the model's predictive performance. Here's how Gradient descent help in optimizing Machine learning models:
+    1. Minimizing Cost functions: The primary goal of gradient descent is to find parameter values that result in the lowest possible loss on the training data.
+    2. Convergence: The algorithm continues to iterate and update the parameters until it meets a predefined convergence criterion, which can be a maximum number of iterations or achieving a desired level of accuracy.
+    3. Generalization: Gradient descent ensure that the optimized model generalizes well to new, unseen data.
+
+Question: Describe batch gradient descent, stochastic gradient descent, and mini-batch gradient descent.
+Answer:
+    Batch Gradient Descent: In Batch Gradient Descent, the entire training dataset is used to compute the gradient of the cost function with respect to the model parameters (weights and biases) in each iteration. This means that all training examples are processed before a single parameter update is made. It converges to a more accurate minimum of the cost function but can be slow, especially in a high dimensionality space.
+    Stochastic Gradient Descent: In Stochastic Gradient Descent, only one randomly selected training example is used to compute the gradient and update the parameters in each iteration. The selection of examples is done independently for each iteration. This is capable of faster updates and can handle large datasets because it processes one example at a time but high variance can cause it to converge slower.
+    Mini-Batch Gradient Descent: Mini-Batch Gradient Descent strikes a balance between BGD and SGD. It divides the training dataset into small, equally-sized subsets called mini-batches. In each iteration, a mini-batch is randomly sampled, and the gradient is computed based on this mini-batch. It utilizes parallelism well and takes advantage of modern hardware like GPUs but can still exhibits some level of variance in updates compared to Batch Gradient Descent.
+
+Question: How can you prevent gradient descent from getting stuck in local minima?
+Answer:
+    The local minima problem occurs when the optimization algorithm converges a solution that is minimum within a small neighbourhood of the current point but may not be the global minimum for the objective function.
+    To mitigate local minimal problems, we can use the following technique:
+    1. Use initialization techniques like Xavier/Glorot and He to model trainable parameters. This will help to set appropriate initial weights for the optimization process.
+    2. Set Adam or RMSProp as optimizer, these adaptive learning rate algorithms can adapt the learning rates for individual parameters based on historical gradients.
+    3. Introduce stochasticity in the optimization process using mini-batches, which can help the optimizer to escape local minima by adding noise to the gradient estimates.
+    4. Adding more layers or neurons can create a more complex loss landscape with fewer local minima.
+    5. Hyperparameter tuning using random search cv and grid search cv helps to explore the parameter space more thoroughly suggesting right hyperparameters for training and reducing the risk of getting stuck in local minima.
+
+Question: Explain the Gradient Boosting algorithms in machine learning.
+Answer:
+    Gradient boosting techniques like XGBoost, and CatBoost are used for regression and classification problems. It is a boosting algorithm that combines the predictions of weak learners to create a strong model. The key steps involved in gradient boosting are:
+    1. Initialize the model with weak learners, such as a decision tree.
+    2. Calculate the difference between the target value and predicted value made by the current model.
+    3. Add a new weak learner to calculate residuals and capture the errors made by the current ensemble.
+    4. Update the model by adding fraction of the new weak learner’s predictions. This updating process can be controlled by learning rate.
+    5. Repeat the process from step 2 to 4, with each iteration focusing on correcting the errors made by the previous model.
+
+Question: Explain convolutions operations of CNN architecture?
+Answer:
+    In a CNN architecture, convolution operations involve applying small filters (also called kernels) to input data to extract features. These filters slide over the input image covering one small part of the input at a time, computing dot products at each position creating a feature map. This operation captures the similarity between the filter’s pattern and the local features in the input. Strides determine how much the filter moves between positions. The resulting feature maps capture patterns, such as edges, textures, or shapes, and are essential for image recognition tasks. Convolution operations help reduce the spatial dimensions of the data and make the network translation-invariant, allowing it to recognize features in different parts of an image. Pooling layers are often used after convolutions to further reduce dimensions and retain important information.
+
+Question: What is feed forward network and how it is different from recurrent neural network?
+Answer:
+    Deep learning designs that are basic are feedforward neural networks and recurrent neural networks. They are both employed for different tasks, but their structure and how they handle sequential data differ.
+    Feed Forward Neural Network
+    * In FFNN, the information flows in one direction, from input to output, with no loops.
+    * It consists of multiple layers of neurons, typically organized into an input layer, one or more hidden layers, and an output layer.
+    * Each neuron in a layer is connected to every neuron in the subsequent layer through weighted connections.
+    * FNNs are primarily used for tasks such as classification and regression, where they take a fixed-size input and produce a corresponding output.
+    Recurrent Neural Network
+    * A recurrent neural network is designed to handle sequential data, where the order of input elements matters. Unlike FNNs, RNNs have connections that loop back on themselves, allowing them to maintain a hidden state that carries information from previous time steps.
+    * This hidden state enables RNNs to capture temporal dependencies and context in sequential data, making them well-suited for tasks like natural language processing, time series analysis, and sequence generation.
+    * However, standard RNNs have limitations in capturing long-range dependencies due to the vanishing gradient problem.
+
+Question: Explain the difference between generative and discriminative models?
+Answer:
+    Generative models focus on generating new data samples, while discriminative models concentrate on classification and prediction tasks based on input data.
+    Generative Models:
+    * Objective: Model the joint probability distribution P(X, Y) of input X and target Y.
+    * Use: Generate new data, often for tasks like image and text generation.
+    * Examples: Variational Autoencoders (VAEs), Generative Adversarial Networks (GANs).
+    Discriminative Models:
+    * Objective: Model the conditional probability distribution P(Y | X) of target Y given input X.
+    * Use: Classify or make predictions based on input data.
+    * Examples: Logistic Regression, Support Vector Machines, Convolutional Neural Networks (CNNs) for image classification.
+
+Question: What is the forward and backward propogations in deep learning?
+Answer:
+    Forward and backward propagations are key processes that occur during neural network training in deep learning. They are essential for optimizing network parameters and learning meaningful representations from input.
+    The process by which input data is passed through the neural network to generate predictions or outputs is known as forward propagation. The procedure begins at the input layer, where data is fed into the network. Each neuron in a layer calculates the weighted total of its inputs, applies an activation function, and sends the result to the next layer. This process continues through the hidden layers until the final output layer produces predictions or scores for the given input data.
+    The technique of computing gradients of the loss function with regard to the network's parameters is known as backward propagation. It is utilized to adjust the neural network parameters during training using optimization methods such as gradient descent.
+    The process starts with the computation of the loss, which measures the difference between the network's predictions and the actual target values. Gradients are then computed by using the chain rule of calculus to propagate this loss backward through the network. This entails figuring out how much each parameter contributed to the error. The computed gradients are used to adjust the network's weights and biases, reducing the error in subsequent forward passes.
+
+Question: What is generative AI?
+Answer:
+    Generative AI is an abbreviation for Generative Artificial Intelligence, which refers to a class of artificial intelligence systems and algorithms that are designed to generate new, unique data or material that is comparable to, or indistinguishable from, human-created data. It is a subset of artificial intelligence that focuses on the creative component of AI, allowing machines to develop innovative outputs such as writing, graphics, audio, and more. There are several generative AI models and methodologies, each adapted to different sorts of data and applications such as:
+    1. Generative AI models such as GPT (Generative Pretrained Transformer) can generate human-like text. Natural language synthesis, automated content production, and chatbot responses are all common uses for these models.
+    2. Images are generated using generative adversarial networks (GANs). GANs are made up of a generator network that generates images and a discriminator network that determines the authenticity of the generated images. Because of the struggle between the generator and discriminator, high-quality, realistic images are produced.
+    3. Generative AI can also create audio content, such as speech synthesis and music composition. Audio content is generated using models such as WaveGAN and Magenta.
+
+Question: What are different neural network architecture used to generate artificial data in deep learning?
+Answer:
+    Various neural networks are used to generate artificial data. Here are some of the neural network architectures used for generating artificial data:
+    1. GANs consist of two components – generator and discriminator, which are trained simultaneously through adversarial training. They are used to generating high-quality images, such as photorealistic faces, artwork, and even entire scenes.
+    2. VAEs are generative models that learn a probabilistic mapping from the data space to a latent space. They also consist of encoder and decoder. They are used for generating images, reconstructing missing parts of images, and generating new data samples. They are also applied in generating text and audio.
+    3. RNNs are a class of neural networks with recurrent connections that can generate sequences of data. They are often used for sequence-to-sequence tasks. They are used in text generation, speech synthesis, music composition.
+    4. Transformers are a type of neural network architecture that has gained popularity for sequence-to-sequence tasks. They use self-attention mechanisms to capture dependencies between different positions in the input data. They are used in natural language processing tasks like machine translation, text summarization, and language generation.
+    5. Autoencoders are neural networks that are trained to reconstruct their input data. Variants like denoising autoencoders and contractive autoencoders can be used for data generation. They are used for image denoising, data inpainting, and generating new data samples.
+
+Question: What is deep reinforcement learning technique?
+Answer:
+    Deep Reinforcement Learning (DRL) is a cutting-edge machine learning technique that combines the principles of reinforcement learning with the capability of deep neural networks. Its ability to enable machines to learn difficult tasks independently by interacting with their environments, similar to how people learn via trial and error, has garnered significant attention.
+    DRL is made up of three fundamental components:
+    1. The agent interacts with the environment and takes decision.
+    2. The environment is the outside world with which the agent interacts and receives feedback.
+    3. The reward signal is a scalar value provided by the environment after each action, guiding the agent toward maximizing cumulative rewards over time.
+    Applications:
+    1. In robotics, DRL is used to control robots, manipulation and navigation.
+    2. DRL plays a role in self-driving cars and vehicle control.
+    3. Can also be used for customized recommendations.
+
+Question: What is transfer learning, and how is it applied in deep learning?
+Answer:
+    Transfer learning is a strong machine learning and deep learning technique that allows models to apply knowledge obtained from one task or domain to a new, but related. It is motivated by the notion that what we learn in one setting can be applied to a new, but comparable, challenge.
+    Benefits of Transfer Learning:
+    * We may utilize knowledge from a large dataset by starting with a pretrained model, making it easier to adapt to a new task with data.
+    * Training a deep neural network from scratch can be time-consuming and costly in terms of compute. Transfer learning enables us to bypass the earliest phases of training, saving both time and resources.
+    * Pretrained models frequently learn rich data representations. Models that use these representations can generalize better, even when the target task has a smaller dataset.
+    Transfer Learning Process:
+    1. Feature Extraction
+        * It's a foundation step in transfer learning. The pretrained data is already trained on large and diverse dataset for a related task.
+        * To leverage the knowlege, output layers of the pretrained model are removed leaving the layers responsible for feature extraction. The target data is passed through these layers to extract feature information.
+        * Using these extracted features, the model captures patterns and representations from the data.
+    2. Fine Tuning
+        * After the feature extraction process, the model is fine-tuned for the specific target task.
+        * Output layers are added to the model and these layer are designed to produce the desired output for the target task.
+        * Backpropagation is used to iteratively update the model’s weights during fine-tuning. This method allows the model to tailor its representations and decision boundaries to the specifics of the target task.
+        * Even as the model focuses in the target task, the knowledge and features learned from the pre-trained layers continue to contribute to its understanding. This dual learning process improves the model's performance and enables it to thrive in tasks that require little data or resources.
+
+Question: Explain the concept of word embeddings in natural language processing (NLP).
+Answer:
+    In NLP, the concept of word embedding is use to capture semantic and contextual information. Word embeddings are dense representations of words or phrases in continuous-valued vectors in a high-dimensional space. Each word is mapped to a vector with the real numbers, these vectors are learned from large corpora of text data.
+    Word embeddings are based on the Distributional Hypothesis, which suggests that words that appear in similar context have similar meanings. This idea is used by word embedding models to generate vector representations that reflect the semantic links between words depending on how frequently they co-occur with other words in the text.
+    The most common word embeddings techniques are
+    * Bag of Words (BOW)
+    * Word2Vec
+    * Glove: Global Vector for word representation
+    * Term frequency-inverse document frequency (TF-IDF)
+    * BERT
+
+Question: What is artificial neural networks.
+Answer:
+    Artificial neural networks take inspiration from structure and functioning of human brain. The computational units in ANN are called neurons and these neurons are responsible to process and pass the information to the next layer.
+    ANN has three main components:
+    * Input Layer: where the network receives input features.
+    * Hidden Layer: one or more layers of interconnected neurons responsible for learning patterns in the data.
+    * Output Layer: provides final output on processed information.
+
+Question: How to build sentiment analysis model from scratch?
+Answer: 
+    Data Collection: a large dataset of text data is gathered. Each piece of text should be labeded with its corresponding sentiment (positive, negative, or neutral).
+    Data Preprocessing (Cleaning and Standardization):
+    * Removing punctuation and special characters.
+    * Converting all text to lowercase.
+    * Removing stop words.
+    * Tokenization: breaking down sentences into individual words.
+    * Stemming/Lemmatization: reducing words to their base form.
+    Feature Representation: the preprocessed text must be converted into numerical features so that a machine learning model can understand. Common approaches include:
+    * Bag-of-Words (BoW): Create a dictionary of all unique words in your dataset. Represent each text as a vector where each element corresponds to the count of a specific word in that text.
+    * TF-IDF: Similar to BoW but weighs words based on their frequency in the text and their rarity across the entire dataset.
+    Model Training:
+    * Choose a classification algorithm (Naive Bayes, Logistic Regression ...)
+    * Split dataset into training and testing sets.
+    * Train model on the training set.
+    Model Evaluation:
+    * Use the trained model to predict the sentiment of the text in the testing set.
+    * Compare the model's predictions to the actual labels and calculate evaluation metrics, such as accuracy, precision, recall and F1-score.
+    Prediction on New Data: Use this model to predict the sentiment of new, unseen text.
+
+Question: When to use tokenization and stemming/lemmatization?
+Answer: 
+    Tokenization should be always used as the first step in any NLP task that involves analyzing text at the word level. It is fundamental for breaking down sentences into individual words or subwords, which is necessary for further processing and analysis.
+    Stemming/Lemmatization can reduce words to their base or root forms. This can be helpful for:
+    * Reducing dimensionality: Fewer unique words to deal with.
+    * Improving generalization: Models can learn patterns across difference word forms.
+    * Applications where exact word forms are less important: Sentiment analysis, topic modeling, information retrieval.
+
+Question: What is the difference between stemming and lemmatization?
+Answer:
+    Stemming is faster and computationally less expensive. It can produce non-words. It is suitable when meaning preservation is less critical.
+    Lemmatization is slower but produces valid words. It requires part-of-speech tagging to work accurately. It is better when preserving meaning is important.
