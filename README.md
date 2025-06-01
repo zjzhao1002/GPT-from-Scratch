@@ -13,5 +13,6 @@ It provides some short questions and answers.
 Two methods for fine tuning are applied:
 * Supervised Fine Tuning (SFT)
 * Parameter Efficient Fine Tuning (PEFT)
+
 After fine tuning, this model can only generate some weird answers to input questions.
 We need more computing resouce and data to improve this model.
